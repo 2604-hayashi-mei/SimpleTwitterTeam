@@ -29,6 +29,7 @@ public class TopServlet extends HttpServlet {
             isShowMessageForm = true;
         }
 
+        
         String searchWord = request.getParameter("word");
         String radiobutton = request.getParameter("radiobutton");
         String userId = request.getParameter("user_id");
