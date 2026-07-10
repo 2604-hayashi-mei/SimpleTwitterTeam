@@ -60,10 +60,11 @@
 	<div class="search">
 		<form action="./" action="get">
 			つぶやき： <input type="text" name="word" value="${searchWord}" /> <input
-				type="radio" name="radiobutton" value="contain" checked="checked">
-			を含む <input type="submit" value="検索"> <input
-				type="radio" name="radiobutton" value="startFrom" checked="checked">
-			から始まる <input type="submit" value="検索">
+				type="radio" name="radiobutton" value="startFrom"
+				<c:if test = "${startFrom}"> checked="checked"</c:if>> から始まる
+			<input type="radio" name="radiobutton" value="contain"
+				<c:if test = "${!startFrom}"> checked="checked"</c:if>> を含む
+			<input type="submit" value="検索">
 		</form>
 	</div>
 	<br />
